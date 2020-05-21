@@ -1,4 +1,4 @@
 # PSD
 Adicionando arquivos de atividades executadas durante a disciplina de PSD
-&nbsp;
+&nbsp
 Engenharia de Telecom - IFSC
