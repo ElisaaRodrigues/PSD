@@ -54,5 +54,3 @@ semilogx(ws, 20*log10(abs(hs))); grid on;
 [hs, ws] = freqs(Ns, Ds, [0, Ws, Wp, 10*Wp]);
 
 20*log10(abs(hs)) %resultados dos ganhos no filtro linear
-
-

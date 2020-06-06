@@ -57,6 +57,14 @@ mag = 20*log10(abs(h));
 subplot(411)
 plot(w, mag);
 title('Hp(p) - LP prototipo')
+ylim([-45 10]);
+xlim([0 10]);
+x1 = [0 1 1];
+y1 = [-1 -1 -45];
+line(x1, y1, 'Color', 'y', 'LineStyle', '-');
+x2 = [0 1.8028 1.8028 10];
+y2 = [0 0 -40 -40];
+line(x2, y2, 'Color', 'y', 'LineStyle', '-');
 grid on;
 
 
@@ -84,6 +92,14 @@ mag2 = 20*log10(abs(h2));
 subplot(412)
 plot(w2, mag2)
 title('Hs(s) - BP analogico')
+ylim([-45 10]);
+xlim([0 10]);
+x1 = [1.4531 1.4531 2.7528 2.7528];
+y1 = [-45 -1 -1 -45];
+line(x1, y1, 'Color', 'g', 'LineStyle', '-');
+x2 = [0 1.0191 1.0191 5.0514 5.0514 10];
+y2 = [-40 -40 0 0 -40 -40];
+line(x2, y2, 'Color', 'g', 'LineStyle', '-');
 grid on;
 
 %transformando para digital
@@ -103,12 +119,28 @@ mag3 = 20*log10(abs(h3));
 subplot(413)
 plot(w3/pi, mag3)
 title('Hz(z) - BP digital')
+ylim([-45 20]);
+xlim([0 1]);
+x1 = [0.4 0.4 0.6 0.6];
+y1 = [-45 9 9 -45];
+line(x1, y1, 'Color', 'm', 'LineStyle', '-');
+x2 = [0 0.3 0.3 0.76 0.76 1];
+y2 = [-30 -30 10 10 -30 -30];
+line(x2, y2, 'Color', 'm', 'LineStyle', '-');
 grid on;
 
 
 subplot(414)
 plot(w3/pi*(fa/2), mag3)
 title('Hz(z) - BP digital com grafico na frequencia')
+ylim([-45 20]);
+xlim([0 500]);
+x1 = [200 200 300 300];
+y1 = [-45 9 9 -45];
+line(x1, y1, 'Color', 'c', 'LineStyle', '-');
+x2 = [0 150 150 380 380 500];
+y2 = [-30 -30 10 10 -30 -30];
+line(x2, y2, 'Color', 'c', 'LineStyle', '-');
 grid on;
 
 
