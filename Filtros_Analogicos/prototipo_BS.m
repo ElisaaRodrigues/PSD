@@ -42,9 +42,9 @@ Omega_p = 1;
 %Calculos abaixo para saber qual omega de rejeicao seria o mais restritivo
 %Omega_s1 = abs((B*lambda_s1)/(-lambda_s1^2+lambda0^2))
 %Omega_s2 = abs((B*lambda_s2)/(-lambda_s2^2+lambda0^2))
-%tendo como resultado Omega_s1=0.4472 e Omega_s2=0.3051
+%tendo como resultado Omega_s1=1.9298 e Omega_s2=4.5679
 
-Omega_s = abs((B*lambda_s2)/(-lambda_s2^2+lambda0^2));
+Omega_s = abs((B*lambda_s1)/(-lambda_s1^2+lambda0^2));
 
 % Determinando Hp(p) prototipo
 
@@ -108,7 +108,7 @@ grid on;
 syms z
 s = 2*((z-1)/(z+1));
 Hz(z) = collect(Hs(s));
-%pretty(vpa(Hz(z), 2))
+pretty(vpa(Hz(z), 2))
 [Nz, Dz] = numden(Hz(z));
 bz = sym2poly(Nz)*10^(Gtopo/20);
 az = sym2poly(Dz);
